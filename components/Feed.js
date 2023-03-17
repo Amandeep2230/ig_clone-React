@@ -17,12 +17,15 @@ function Feed() {
                 
 
             {/* Section */}
-            <section>
-                {/* Mini profile */}
-                <MiniProfile />
+            <section className="hidden xl:inline-grid md:col-span-1">
+                <div className="fixed">
+                    {/* Mini profile */}
+                    <MiniProfile />
 
-                {/* Suggestions */}
-                <Suggestions />
+                    {/* Suggestions */}
+                    <Suggestions />
+                </div>
+                
             </section>
                 
             
