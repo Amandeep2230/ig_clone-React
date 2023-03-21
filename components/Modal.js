@@ -1,10 +1,16 @@
-import { useRecoilState } from "recoil";
+import { snapshot, useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom"
 import { Dialog, Transition } from "@headlessui/react"
 import {Fragment, useRef, useState} from "react"
 import { CameraIcon } from "@heroicons/react/outline";
+import { addDoc, collection, doc, serverTimestamp, updateDoc } from "@firebase/firestore"
+import { useSession} from "next-auth/react"
+import { ref, getDownloadURL, uploadString } from "@firebase/storage"
+import { db, storage } from "../firebase"
+
 function Modal() {
 
+    const { data:session } = useSession()
     const [open, setOpen] = useRecoilState(modalState)
     const filePickerRef = useRef(null)
     const captionRef = useRef(null)
@@ -15,7 +21,34 @@ function Modal() {
         if (loading) return;
 
         setLoading(true)
+        //create post and add to firestore 'posts'
 
+        //get post Id fro created post
+
+        //upload image to firebase storage with the post ID
+
+        //get a download URL from firebase storage and update to original post
+
+        const docRef = await addDoc(collection(db, 'posts'), {
+            username: session.user.name,
+            caption: captionRef.current.value,
+            profileImg: session.user.image,
+            timestamp: serverTimestamp()
+        })
+
+        const imageRef = ref(storage, `posts/${docRef.id}/image`)
+
+        await uploadString(imageRef, selectedFile, "data_url").then(async snapshot => {
+            const downloadURL = await getDownloadURL(imageRef)
+
+            await updateDoc(doc(db, 'posts', docRef.id), {
+                image: downloadURL
+            })
+        })
+
+        setOpen(false)
+        setLoading(false)
+        setSelectedFile(null)
 
     }
 
@@ -125,8 +158,11 @@ function Modal() {
                                     className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm
                                     px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 foucs:outline-none
                                     focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm disabled:bg-gray-300
-                                    disabled:cursor-not-allowed hover:disabled:bg-gray-300">
-                                        Upload Post
+                                    disabled:cursor-not-allowed hover:disabled:bg-gray-300"
+                                    onClick={uploadPost}
+                                    disabled={!selectedFile}
+                                    >
+                                        {loading ? "Uploading..." : "Upload Post"}
                                     </button>
                                 </div>
                             </div>
