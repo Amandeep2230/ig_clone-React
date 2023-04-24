@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import faker from "faker"
+import user from "../user.png"
 
 function Suggestions() {
     const [suggestions, setSuggestions] = useState([]);
@@ -24,7 +25,7 @@ function Suggestions() {
             {
                 suggestions.map(profile => (
                     <div key={profile.id} className="flex items-center justify-between mt-3">
-                        <img className="w-10 h-10 rounded-full border p-[2px]" src="https://links.papareact.com/3ke" alt="" />
+                        <img className="w-10 h-10 rounded-full border p-[2px]" src={user.src} alt="" />
                     
                     <div className="flex-1 ml-4">
                         <h2 className="font-semibold text-sm">{profile.username}</h2>

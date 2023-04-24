@@ -6,13 +6,14 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// NOTE: ENTER DETAILS AS PER YOUR PROJECT
 const firebaseConfig = {
-  apiKey: "AIzaSyCUi3vIS7fyJ3P2X_VLPSAoa7cgKs2M_FI",
-  authDomain: "ig-clone-a01ad.firebaseapp.com",
-  projectId: "ig-clone-a01ad",
-  storageBucket: "ig-clone-a01ad.appspot.com",
-  messagingSenderId: "1028188179534",
-  appId: "1:1028188179534:web:c77380a1558d3f290f071f"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase

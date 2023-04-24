@@ -1,5 +1,6 @@
 import Stories from "./Stories"
 
+
 function Story({img, username}) {
     return (
         <div>

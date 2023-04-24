@@ -2,6 +2,7 @@ import faker from "faker";
 import { useEffect, useState } from "react";
 import Story from "./Story"
 import {useSession} from "next-auth/react";
+import user from "../user.png"
 
 function Stories() {
 
@@ -29,7 +30,7 @@ function Stories() {
             {suggestions.map(profile => (
                 <Story 
                 key={profile.id}
-                img="https://links.papareact.com/3ke"
+                img={user.src}
                 username={profile.username}
                 />
             ))}
