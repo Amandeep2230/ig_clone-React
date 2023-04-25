@@ -5,7 +5,7 @@ Walkthrough:
 SignIn using your google account
 ![signIn](https://user-images.githubusercontent.com/66684807/234139907-905cebf1-f543-4d3c-8301-3b6b36f981ac.PNG)
 
-Access the feed after you signing in successfully
+Access the feed after signing in successfully
 ![feed](https://user-images.githubusercontent.com/66684807/234139997-b381a6ca-8b78-44a8-8d3f-9032200b112a.PNG)
 
 Make posts: Select the camera icon, select a picture you want to upload, provide a caption and boom, your post is on the feed.
