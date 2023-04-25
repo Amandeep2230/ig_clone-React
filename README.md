@@ -12,12 +12,12 @@ Make posts: Select the camera icon, select a picture you want to upload, provide
 ![upload1](https://user-images.githubusercontent.com/66684807/234140099-d0e10f52-4638-40a9-a4a5-d1507833100d.PNG)
 ![upload2](https://user-images.githubusercontent.com/66684807/234140109-1a5aa0c0-4ad9-4dab-995a-a18d4bd8030e.PNG)
 
-Like, Comment on posts: You can like and comment on posts.
+Like and Comment on posts: You can like and comment on posts.
 ![like](https://user-images.githubusercontent.com/66684807/234140244-906abe29-c17c-4dee-aec5-e42b7b69f7e1.PNG)
 ![comments1](https://user-images.githubusercontent.com/66684807/234140254-fbcaba74-c749-4106-a48e-85f18b07cefe.PNG)
 ![comments2](https://user-images.githubusercontent.com/66684807/234140264-4b722d10-fb54-421f-a09f-5a50050a7be7.PNG)
 
-To deploy it at your end:
+To deploy it on your end:
 Change the following parameters based on your firebase project details.
 Firebase.js
 ![firebase](https://user-images.githubusercontent.com/66684807/234140389-d38125a9-2198-4822-8e61-2e50828d95bd.PNG)
