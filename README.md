@@ -1,4 +1,4 @@
-Welcome to the IG Clone developed using NextJS, Tailwind CSS and Firebase.
+Welcome to the Instagram Clone developed using NextJS, Tailwind CSS and Firebase.
 
 Walkthrough:
 
