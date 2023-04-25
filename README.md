@@ -23,7 +23,7 @@ Firebase.js
 ![firebase](https://user-images.githubusercontent.com/66684807/234140389-d38125a9-2198-4822-8e61-2e50828d95bd.PNG)
 
 Create and pass the parameters in env.local
-![env](https://user-images.githubusercontent.com/66684807/234140424-3e34e59d-e52e-47ab-9ca2-f90722861458.PNG)
+![env](https://user-images.githubusercontent.com/66684807/234140884-88039a9b-d89b-4496-a55c-3b71254b4f40.PNG)
 
 I hope you liked this project.
 
